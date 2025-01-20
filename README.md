@@ -157,4 +157,4 @@ public class KeycloakAdminClientService {
 
 ## Conclusion
 
-This guide walks through setting up Keycloak with Spring Boot for authentication and authorization. Feel free to use this as a starting point for your own projects!
+This guide walks through setting up Keycloak with Spring Boot for authentication and authorization.
