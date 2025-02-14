@@ -68,20 +68,6 @@ volumes:
 
 ### Environment Variables (`keycloak.env`)
 
-```text
-KEYCLOAK_USER=kc_dev
-KEYCLOAK_PASSWORD=kc_dev1231232
-KEYCLOAK_IMPORT="/tmp/realm.json -Dkeycloak.profile.feature.upload_scripts=enabled"
-DB_VENDOR=mariadb
-DB_ADDR=keycloak_db:3306
-DB_DATABASE=keycloak_1
-DB_USER=root
-DB_PASSWORD=root
-
-MYSQL_ROOT_PASSWORD=root
-MYSQL_DATABASE=keycloak_1
-```
-
 Run Keycloak using:
 
 ```sh
@@ -89,7 +75,7 @@ docker-compose up -d
 ```
 
 Once running, access Keycloak at [http://localhost:18080](http://localhost:18080).
-
+![img.png](img.png)
 ## Keycloak Client Configuration
 
 1. Create a new realm.
@@ -99,6 +85,7 @@ Once running, access Keycloak at [http://localhost:18080](http://localhost:18080
    - `moderator` (composite role including `member`)
    - `member` (non-composite)
 
+![img_1.png](img_1.png)
 ## Spring Boot Application Configuration
 
 `application.properties`:
@@ -113,7 +100,7 @@ keycloak.ssl-required=none
 #name of the client
 keycloak.resource=spring-boot-client
 # replace with your client's secret
-keycloak.credentials.secret=1a378e1c-90ce-4fa2-8f9f-f892d497512e
+keycloak.credentials.secret=1a378e1c-90ce-4fa2-8f9f-f892d4975...
 keycloak.use-resource-role-mappings=true
 keycloak.bearer-only=true
 ```
